@@ -60,5 +60,7 @@ public class TestNGDetails {
 	public void afterMethod() {
 		System.out.println("-- After Method --");
 	}
+	
+	//Testing the code for pushing 
 
 }
