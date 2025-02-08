@@ -9,6 +9,8 @@ public class ExtractStringPart {
 		System.out.println(str.substring(0, 4));
 		
 		System.out.println(str.substring(10,str.length()));
+		
+		System.out.println(str.substring(4,str.length()-4));
 
 
 	}
