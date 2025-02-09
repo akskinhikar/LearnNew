@@ -2,7 +2,6 @@ package SDETCodingPractice;
 
 import java.util.Arrays;
 
-import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
 public class FindMissingNumAndInsert {
 
