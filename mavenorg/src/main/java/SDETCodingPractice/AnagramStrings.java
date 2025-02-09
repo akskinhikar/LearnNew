@@ -9,8 +9,8 @@ public class AnagramStrings {
 		String str2 ="toys";
 		boolean flag = false;
 		
-		char[] arr1=str1.toCharArray();
-		char[] arr2=str2.toCharArray();
+		char[] arr1=str1.toLowerCase().toCharArray();
+		char[] arr2=str2.toLowerCase().toCharArray();
 		
 		String str3 = "Stop";
 		String str4 = "Tops";
@@ -20,19 +20,12 @@ public class AnagramStrings {
 			System.out.println("As lenght is equal hence it can be Anagram");
 			
 			for(int i=0;i<arr1.length;i++) {
-				//System.out.println("i ="+i);
 				for(int j=0;j<arr2.length;j++) {
-					//System.out.println("j ="+j);
-					if(arr1[i] == arr2[j]) {
-						//System.out.println(arr1[i]+" ----- "+arr2[j]);
-						
+					if(arr1[i] == arr2[j]) {						
 						flag = true;
-						//System.out.println(flag);
-						//System.out.println("*******");
 						break;
 					}else {
 						flag = false;
-						//System.out.println(flag);
 					}
 				}
 			}
@@ -49,6 +42,8 @@ public class AnagramStrings {
 		
 		
 		System.out.println("**** Another ways to compair the arrays ****");
+		
+		// Another way to write the same code
 		
 		char[] arr3 = str3.toLowerCase().toCharArray();
 		char[] arr4 = str4.toLowerCase().toCharArray();

@@ -1,7 +1,5 @@
 package SDETCodingPractice;
 
-import java.util.Arrays;
-
 public class SecondHighestNoInArray {
 
 	public static void main(String[] args) {

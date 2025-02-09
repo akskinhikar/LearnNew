@@ -3,15 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.sample.mavenorg.TestNGDetails">
+      <class name="tests.PutPatchDeleteExamples">
         <methods>
-          <include name="beforeClass"/>
-          <include name="beforGroup"/>
-          <include name="afterClass"/>
-          <include name="openBrowser"/>
-          <include name="afterMethod"/>
+          <include name="testPut"/>
         </methods>
-      </class> <!-- org.sample.mavenorg.TestNGDetails -->
+      </class> <!-- tests.PutPatchDeleteExamples -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

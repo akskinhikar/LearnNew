@@ -1,6 +1,10 @@
 package SDETCodingPractice;
 
 public class ArrayManupulation {
+	
+	/*
+	 * update the array to {Sun,Mon,Tue...}
+	 */
 
 	public static void main(String[] args) {
 		String[] input = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};

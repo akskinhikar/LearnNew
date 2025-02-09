@@ -1,10 +1,10 @@
+package SDETCodingPractice;
 public class UpperToLowerString {
 
     public static void main(String[] args) {
         String str = "My Name is Akshay Kinhikar";
         String newStr = "";
         char[] arr = str.toCharArray();
-        char ch1;
 
         for(int i=0;i<arr.length;i++){
             if(arr[i] == ' '){

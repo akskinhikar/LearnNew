@@ -1,4 +1,5 @@
-import java.util.Arrays;
+
+package SDETCodingPractice;
 
 public class ReplaceAStringWithChar {
 
