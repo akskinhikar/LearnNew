@@ -11,7 +11,7 @@ public class ArrayManupulation {
 		String[] newString = new String[input.length];
 		
 		for(int i=0;i<input.length;i++) {
-			newString[i] = input[i].substring(0, 3).toString();
+			newString[i] = input[i].substring(0, 3);
 			
 		}
 		
