@@ -2,7 +2,7 @@ package SDETCodingPractice;
 public class UpperToLowerString {
 
     public static void main(String[] args) {
-        String str = "My Name is Akshay Kinhikar";
+        String str = "My Name is Akshay Kinhikar@#";
         String newStr = "";
         char[] arr = str.toCharArray();
 
@@ -14,6 +14,8 @@ public class UpperToLowerString {
 
             }else if(arr[i] >= 'A' && arr[i]<='Z'){
                 newStr = newStr + Character.toLowerCase(arr[i]);
+            }else {
+            	newStr = newStr + arr[i];
             }
         }
 

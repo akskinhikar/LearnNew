@@ -1,9 +1,13 @@
 package SDETCodingPracticeTwo;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -19,6 +23,20 @@ public class StringManipulation {
 		//countWords();
 		
 		//duplicatWordRemoval();
+		
+		//findDuplicateChar("hackerearth");
+		
+		//removeDuplicateChar("abcdaefcghf");
+		
+		
+		//reverseAString("This is a string");
+		
+		//nonSpaceChar("This is a string");
+		
+		//swapTwoString("This is a string");
+		
+		collec();
+		
 		
 	}
 	
@@ -132,7 +150,137 @@ public class StringManipulation {
 		
 	}
 	
+	//Write a program to find duplicate characters in a given String.
 	
+	public static void findDuplicateChar(String str) {
+		
+		char[] arr = str.toCharArray();
+		int count=1;
+		
+		Map<Character,Integer> map = new HashMap<>();
+		
+		for(int i=0;i<arr.length;i++) {
+			if(!map.containsKey(arr[i])) {
+				map.put(arr[i], count);
+			}else {
+				map.put(arr[i], map.get(arr[i])+1);
+			}
+		}
+		
+		for(Character e : map.keySet()) {
+			if(map.get(e)>1)
+			System.out.println(e +" : "+ map.get(e));
+		}
+		
+		
+	}
+	
+	
+	//Write a program to remove duplicate characters in a given String.
+	
+	public static void removeDuplicateChar(String str) {
+		
+		char[] arr = str.toCharArray();
+		int count = 1;
+		String str2= "";
+		
+		Map<Character,Integer> map = new LinkedHashMap<>();
+		
+		for(int i = 0; i<arr.length;i++) {
+			if(!map.containsKey(arr[i])) {
+				
+					map.put(arr[i], count);
+			} else {
+				map.put(arr[i], map.get(arr[i])+1);
+			}
+
+		}
+		
+		for(Character e : map.keySet()) {
+			if(map.get(e)==1) {
+				str2=str2+e;
+			}
+		}
+		
+		System.out.println(str2);
+		
+		
+		
+	}
+	
+	//Write a program to reverse a given string.
+	public static void reverseAString(String str) {
+		
+		String revString = "";
+		
+		for(int i=str.length()-1;i>=0;i--) {
+			revString = revString+str.charAt(i);
+		}
+		
+		System.out.println(revString);
+			
+			
+			
+	}
+	
+	
+	public static void nonSpaceChar(String str) {
+		
+		int count = 0;
+		char c = ' ';
+		for(int i =0 ; i<str.length(); i++) {
+			if(str.charAt(i)!= c) {
+				count++;
+			}
+		}
+		
+		System.out.println(count);
+		
+	}
+	
+	
+	public static void swapTwoString(String str) {
+		
+		
+		StringBuilder sb = new StringBuilder(str);
+		
+		
+		System.out.println(sb.reverse().toString());
+		
+	}
+	
+	
+	public static void collec() {
+		
+		
+		Object[] foo = new Object[4];
+		foo[0] = "Akshay";
+		foo[1] = 1234;
+		foo[2] = true;
+		foo[3] = 3.14;
+		
+		System.out.println(foo[0].getClass());
+		System.out.println(foo[1].getClass());
+		System.out.println(foo[2].getClass());
+		System.out.println(foo[3].getClass());
+		
+		for(Object o : foo) {
+			System.out.println(o);
+		}
+		
+		int num = (Integer)foo[1];
+		
+		System.out.println(num);
+	
+		
+	}
+	
+	
+	
+		
+		
+	
+
 	
 
 
