@@ -1,7 +1,5 @@
 package SDETCodingPractice;
 
-import java.util.Iterator;
-
 public class StarPatterns {
 
 	public static void main(String[] args) {
@@ -55,6 +53,23 @@ public class StarPatterns {
 		}
 		
 		System.out.println("===========================");
+		
+		
+		/*
+		 *     
+				    * 
+				   * * 
+				  * * * 
+				 * * * * 
+				* * * * * 
+		 *     
+		 *     
+		 *     
+		 *     
+		 *     
+		 *     
+		 */
+		
 		
 		int i, j, f;
 		int rows = 5;
