@@ -319,11 +319,6 @@ public class CollectionsPrograms {
 		hashMap.put(1237, "Cha Kinhikar");
 		
 		System.out.println(hashMap);
-		
-	
-		
-		
-		
 	}
 		
 
