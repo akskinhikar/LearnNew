@@ -3,8 +3,14 @@ package SDETCodingPracticeTwo;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Iterator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.Vector;
 
 public class CollectionsPrograms {
@@ -17,7 +23,8 @@ public class CollectionsPrograms {
 		//searchElement();
 		//convertArraysToList();
 		//convertCollectionToArray();
-		compareElements();
+		//compareElements();
+		collect();
 	}
 	
 	
@@ -177,6 +184,147 @@ public class CollectionsPrograms {
 		
 	}
 		
+	
+	public static void collect() {
+		
+		
+		/*
+		 * Fixed size array
+		 * no in built methods
+		 * difficult to iterate 
+		 */
+		
+		System.out.println("****** Arrays *****");
+		String[] arrays = {"Rahul","Raj","Neel","Rohan"};
+				
+		/*
+		 *  ArrayList are faster in Searching elements
+		 *  Dynamic array size
+		 *  Addition and removal is possible 
+		 */
+		
+		System.out.println("****** Array List *****");
+		List<String> arrayList = new ArrayList<>();
+		
+		arrayList.add("Rahul");
+		arrayList.add("Raj");
+		arrayList.add("Neel");
+		arrayList.add("Rohan");
+		
+		System.out.println(arrayList.get(3)); // quickly searches the element
+		
+		arrayList.add(2, "Akshay"); //will take time to add or remove the element
+		arrayList.forEach(System.out::println);
+		
+		/*
+		 *  LinkedList are faster in addition and deletion of elements
+		 */
+		System.out.println("****** Linked List *****");
+		List<String> linkedList = new LinkedList<>();
+		linkedList.add("Rahul");
+		linkedList.add("Raj");
+		linkedList.add("Neel");
+		linkedList.add("Rohan");
+		
+		System.out.println(linkedList.get(3)); // takes time to searches the element
+		
+		linkedList.add(2, "Akshay"); //quickly add or remove the element
+		linkedList.forEach(System.out::println);
+		
+		/*
+		 * No order
+		 * No duplicates
+		 * Allows null value
+		 * don't allow traversing using indexing
+		 * Best for removing duplicate elements
+		 * By using Hash set the addition, deletion and searching of element takes same time hence performance is very good.
+		 */
+		
+		System.out.println("****** Hash Set *****");
+		
+		Set<String> setHash = new HashSet<>();
+		setHash.add("Rahul");
+		setHash.add("Raj");
+		setHash.add("Neel");
+		setHash.add("Rohan");
+		setHash.add(null);
+		
+		System.out.println(setHash);
+		System.out.println(setHash.contains("Rahul"));
+		System.out.println(setHash.size());
+		
+		setHash.forEach(System.out::println);
+		
+		
+		//remvoing the duplicte value;
+		
+		System.out.println("****** remvoing the duplicte value *****");
+		List<String> list = new ArrayList<>();
+		
+		list.add("Rahul");
+		list.add("Raj");
+		list.add("Neel");
+		list.add("Rohan");
+		list.add("Rahul");
+		list.add("Neel");
+		System.out.println("With Duplicate");
+		list.forEach(System.out::println);
+		
+		System.out.println("Without Duplicate");
+		Set<String> set1 = new HashSet<>();
+		set1.addAll(list);
+		set1.forEach(System.out::println);
+		
+		/*
+		 * Sorted Set
+		 * Performance is NOT as good as Hash Set
+		 * Should be used if sorted set is required
+		 */
+		
+		System.out.println("****** Tree Set *****");
+		Set<String> treeSet = new TreeSet<>();
+		treeSet.add("Rahul");
+		treeSet.add("Raj");
+		treeSet.add("Neel");
+		treeSet.add("Rohan");
+		
+		System.out.println(treeSet);
+		
+		/*
+		 * Contains the ordered set i.e. the order in which elements are added in Set
+		 * Performance is better than Tree set but not as fast as Hash Set
+		 */
+		
+		System.out.println("****** Linked Hash Set *****");
+		
+		Set<String> linkedHashSet = new LinkedHashSet<>();
+		linkedHashSet.add("Rahul");
+		linkedHashSet.add("Raj");
+		linkedHashSet.add("Neel");
+		linkedHashSet.add("Rohan");
+		
+		System.out.println(linkedHashSet);
+		
+		/*
+		 *Collection of key and values
+		 *Allows duplicate value
+		 *Does'nt allow duplicate keys.
+		 */
+		System.out.println("****** Map *****");
+		
+		Map<Integer,String> hashMap = new HashMap<>();
+		hashMap.put(1234, "Akshay Kinhikar");
+		hashMap.put(1235, "Shweta Kinhikar");
+		hashMap.put(1236, "Apa Kinhikar");
+		hashMap.put(1237, "Cha Kinhikar");
+		
+		System.out.println(hashMap);
+		
+	
+		
+		
+		
+	}
 		
 
 }
