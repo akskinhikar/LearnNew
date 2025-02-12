@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -24,7 +25,9 @@ public class CollectionsPrograms {
 		//convertArraysToList();
 		//convertCollectionToArray();
 		//compareElements();
-		collect();
+		//collect();
+		//collections();
+		copyArrays();
 	}
 	
 	
@@ -320,6 +323,71 @@ public class CollectionsPrograms {
 		
 		System.out.println(hashMap);
 	}
+	
+	  public static void collections(){
+	      
+	      String str = "My name is akshay kinhikar";
+	      
+	      String[] arr = str.split(" ");
+	      
+	      List<String> lst = new ArrayList<>();
+	      for(String e : arr){
+	          lst.add(e);
+	      }
+	    
+	      
+	      lst.forEach(System.out::println);
+	      
+	  }
+	  
+	  public static void copyArrays() {
+		  
+		  List<String> arryaList = new ArrayList<>(Arrays.asList("akshay","kinhi","shweta"));
+
+		  
+		  
+		  Set<String> hashSet = new HashSet<>();
+		  hashSet.addAll(arryaList);
+		  
+		  Set<String> treeSet = new TreeSet<>();
+		  treeSet.addAll(arryaList);
+		  
+		  Set<String> linkedHashSet = new LinkedHashSet<>();
+		  linkedHashSet.addAll(arryaList);
+		  
+		  
+		  List<String> linkedList = new LinkedList<>();
+		  linkedList.addAll(arryaList);
+		  
+		  
+		  Iterator<String> it = linkedHashSet.iterator();
+		  
+		  while (it.hasNext()) {
+			String string = (String) it.next();
+			System.out.println(string);
+			
+		}
+		  
+		  
+		  System.out.println(hashSet.containsAll(linkedHashSet));
+		  System.out.println(hashSet.contains("akshay"));
+		  
+		  Set<Object> hashSet1 = new HashSet<>(Arrays.asList("Akshay",1234,3.14));
+		  
+		  for(Object e : hashSet1) {
+			  
+			  System.out.println(e.getClass());
+			  if(e.getClass().toString().contains("Integer")) {
+				  System.out.println("Its an intieger");
+			  }
+		  }
+		  
+		  
+		  
+		  
+		  
+		  
+	  }
 		
 
 }

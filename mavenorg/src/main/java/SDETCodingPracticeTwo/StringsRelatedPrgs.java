@@ -89,6 +89,7 @@ public class StringsRelatedPrgs {
 	
 	public static void firtNonRepetativeChar() {
 		
+		
 		String str = "fdsfdgergergfga";
 		
 		char[] arr = str.toCharArray();

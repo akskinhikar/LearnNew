@@ -9,7 +9,9 @@ public class RegularPrograms {
 		//palandrom();
 		
 		//reverseNo();
-		arith();
+		//arith();
+		
+		fetchOddNo();
 		
 		
 
@@ -77,6 +79,22 @@ public class RegularPrograms {
 		System.out.println(19.9999d/0);
 		System.out.println(0.0/0);
 		System.out.println(0.0/0.0);
+		
+	}
+	
+	
+	public static void fetchOddNo() {
+		
+		int[] arr = {23,12,45,33,66,23,67,45};
+		
+		for(int i = 0;i<arr.length;i++) {
+			
+			if(arr[i]%2 != 0) {
+				System.out.println(arr[i]);
+			}
+			
+			
+		}
 		
 	}
 
