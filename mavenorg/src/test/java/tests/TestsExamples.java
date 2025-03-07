@@ -66,7 +66,7 @@ public class TestsExamples {
 		.when()
 		.post("/users")
 		.then()
-		.statusCode(201)
+		.statusCode(201).time()
 		.log().all();
 		
 	}
